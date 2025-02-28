@@ -45,23 +45,24 @@ export default async function MenuHeader() {
     },
   ];
   return (
-    <>
-      <Container bg={'gray.50'} marginTop={'10px'} borderTopRadius={'2xl'}>
-        <Center>
-          {Item.map((rs, index) => {
-            return (
-              <Box key={index} w="100%" p="4">
-                <Flex align={'center'} direction="column">
-                  <rs.icon size={'34px'} style={{marginBottom:'5px'}}></rs.icon>
-                  <label style={{ fontWeight: 'normal', fontSize: '12px' }}>
-                    {rs.label}
-                  </label>
-                </Flex>
-              </Box>
-            );
-          })}
-        </Center>
-      </Container>
-    </>
+    <Container bg={'gray.50'} marginBottom={'10px'} borderTopRadius={'2xl'}>
+      <Center>
+        {Item.map((rs, index) => {
+          return (
+            <Box key={index} w="100%" p="4">
+              <Flex align={'center'} direction="column">
+                <rs.icon
+                  size={'34px'}
+                  style={{ marginBottom: '5px' }}
+                ></rs.icon>
+                <label style={{ fontWeight: 'normal', fontSize: '12px' }}>
+                  {rs.label}
+                </label>
+              </Flex>
+            </Box>
+          );
+        })}
+      </Center>
+    </Container>
   );
 }
